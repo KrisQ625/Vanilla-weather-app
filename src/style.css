@@ -1,3 +1,29 @@
-h1{
-    color:blueviolet;
+.weather-app{
+    border: 1px solid ;
+    border-radius: 5px;
+    border-color: rgb(225, 217, 217);
+    margin: 50px;
+    padding: 15px;
+    max-width: 600px;
 }
+h1 {display: block;
+    font-size: 60px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: black;}
+
+    p{ font-size: 40px;
+        text-align: center;
+        padding: auto;
+        color: black;}
+        .description{
+            font-size: 35px;
+            padding: 20px;
+        }
+        form{
+            padding: 20px;
+            
+        }
+        .input{border-radius: 5px;
+        border-color: gray;}
