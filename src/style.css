@@ -7,8 +7,9 @@ color: white;}
     border: 1px solid ;
     border-radius: 5px;
     border-color: rgb(225, 217, 217);
-    margin: 50px;
-    padding: 15px;
+    margin:   auto ;
+    margin-top: 50px;
+    padding: 40px;
     max-width: 600px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 h1 {display: block;
@@ -23,7 +24,7 @@ h1 {display: block;
         padding: auto;
         color: black;}
         .description{
-            font-size: 35px;
+            font-size: 30px;
             padding: 20px;
             margin: 0 auto;}
         
@@ -31,7 +32,8 @@ h1 {display: block;
             padding: 20px;
         }
         input{border-radius: 10px;
-        border-color: gray;}
+        border-color: gray;
+    box-shadow: 5px;}
         a{
             font-size: small;
         }
