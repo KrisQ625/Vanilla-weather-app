@@ -30,7 +30,7 @@ h1 {display: block;
         form{
             padding: 20px;
         }
-        .input{border-radius: 5px;
+        input{border-radius: 10px;
         border-color: gray;}
         a{
             font-size: small;
