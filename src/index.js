@@ -48,7 +48,7 @@ function showTemp(response)
   let temp = document.querySelector("#temperature");
   temp.innerHTML = ` ${temperature} °`;
   let description = response.data.weather[0].description;
-  console.log(response);
+  
   let descriptionWeather = document.querySelector("#description");
   descriptionWeather.innerHTML = ` ${description}`;
   let iconElement= response.data.weather[0].icon;
@@ -60,5 +60,16 @@ wind.innerHTML=(response.data.wind.speed);
   name.innerHTML = response.data.name;
   let icon= document.querySelector("#icon");
   icon.setAttribute("src",`http://openweathermap.org/img/wn/${iconElement}@2x.png`);
+
+  celsiusTemperature=Math.round(response.data.main.temp);
   console.log(icon);
 }
+let celsiusTemperature=null
+function showFahrenheit(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#temperature");
+  let fahrenheitTemperature= (celsiusTemperature*9)/5+32;
+temperatureElement.innerHTML=`${Math.round(fahrenheitTemperature)}°`;
+}
+ let fahrenheitLink=document.querySelector("#fahr");
+ fahrenheitLink.addEventListener("click",showFahrenheit);
