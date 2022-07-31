@@ -46,12 +46,16 @@ search.addEventListener("submit", searchCity);
 function showTemp(response)
 {let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temperature");
-  temp.innerHTML = ` ${temperature} `;
+  temp.innerHTML = ` ${temperature} °`;
   let description = response.data.weather[0].description;
-  console.log(description);
+  console.log(response);
   let descriptionWeather = document.querySelector("#description");
   descriptionWeather.innerHTML = ` ${description}`;
   document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
-
+let humidity=document.querySelector("#humidity");
+humidity.innerHTML=(response.data.main.humidity);
+let wind= document.querySelector("#wind");
+wind.innerHTML=(response.data.wind.speed);
   let name = document.querySelector("#city");
-  name.innerHTML = response.data.name;}
+  name.innerHTML = response.data.name;
+}
