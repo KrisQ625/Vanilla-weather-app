@@ -65,11 +65,22 @@ wind.innerHTML=(response.data.wind.speed);
   console.log(icon);
 }
 let celsiusTemperature=null
+
+function showCelsius(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#temperature");
+  temperatureElement.innerHTML=`${celsiusTemperature}°`;
+
+}
 function showFahrenheit(event){
   event.preventDefault();
   let temperatureElement=document.querySelector("#temperature");
   let fahrenheitTemperature= (celsiusTemperature*9)/5+32;
 temperatureElement.innerHTML=`${Math.round(fahrenheitTemperature)}°`;
 }
+
+let celsiusLink=document.querySelector("#celsius");
+celsiusLink.addEventListener("click",showCelsius);
+
  let fahrenheitLink=document.querySelector("#fahr");
  fahrenheitLink.addEventListener("click",showFahrenheit);
