@@ -51,11 +51,14 @@ function showTemp(response)
   console.log(response);
   let descriptionWeather = document.querySelector("#description");
   descriptionWeather.innerHTML = ` ${description}`;
-  document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
+  let iconElement= response.data.weather[0].icon;
 let humidity=document.querySelector("#humidity");
 humidity.innerHTML=(response.data.main.humidity);
 let wind= document.querySelector("#wind");
 wind.innerHTML=(response.data.wind.speed);
   let name = document.querySelector("#city");
   name.innerHTML = response.data.name;
+  let icon= document.querySelector("#icon");
+  icon.setAttribute("src",`http://openweathermap.org/img/wn/${iconElement}@2x.png`);
+  console.log(icon);
 }

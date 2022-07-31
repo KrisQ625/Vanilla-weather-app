@@ -34,8 +34,8 @@ h1 {display: block;
         input{border-radius: 10px;
         border-color: gray;
     box-shadow: 5px;}
-        a{
-            font-size: small;
-        }
         ul{list-style: none;
         text-transform: capitalize;}
+        .source{ display: block;}
+            
+    
