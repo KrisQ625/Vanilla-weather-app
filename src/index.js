@@ -69,14 +69,14 @@ let celsiusTemperature=null
 function showCelsius(event){
   event.preventDefault();
   let temperatureElement=document.querySelector("#temperature");
-  temperatureElement.innerHTML=`${celsiusTemperature}°`;
+  temperatureElement.innerHTML=`${celsiusTemperature}°C`;
 
 }
 function showFahrenheit(event){
   event.preventDefault();
   let temperatureElement=document.querySelector("#temperature");
   let fahrenheitTemperature= (celsiusTemperature*9)/5+32;
-temperatureElement.innerHTML=`${Math.round(fahrenheitTemperature)}°`;
+temperatureElement.innerHTML=`${Math.round(fahrenheitTemperature)} °F`;
 }
 
 let celsiusLink=document.querySelector("#celsius");
