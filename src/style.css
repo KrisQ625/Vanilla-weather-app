@@ -30,9 +30,14 @@ h1 {display: block;
         
         form{
             padding: 20px;
+            color: beige;
+            border-color: aliceblue;
+        
+           
         }
         input{border-radius: 10px;
-        border-color: gray;
+            border-color: aliceblue;
+        
     box-shadow: 5px;}
         ul{list-style: none;
         text-transform: capitalize;}
@@ -42,5 +47,12 @@ h1 {display: block;
           text-decoration: none;
           color: rgb(35, 34, 34);
         }
-            
-    
+            .weather-forecast{
+                text-align: center;
+            }
+    .forecast-day{
+        color: black;
+    }
+    .min-forecast{
+        opacity: 0.6;
+    }
