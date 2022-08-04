@@ -15,8 +15,10 @@ h1 {display: block;
     font-size: 60px;
     padding: 20px;
     text-align: center;
-    font-weight: bolder;
-    color: black;}
+    font: weight 400px;
+    color: black;
+font-family: 
+     'Dancing Script', cursive;}
 
     p{ font-size: 40px;
         text-align: center;
