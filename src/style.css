@@ -1,7 +1,7 @@
 
 .weather-app{
-  background-color: rgb(251, 248, 248);
-    color: rgb(111, 108, 108);
+  background-color: rgb(226, 231, 236);
+    color: rgb(142, 140, 140);
     border: 1px solid ;
     border-radius: 10px;
     border-color: rgb(225, 217, 217);
@@ -27,7 +27,9 @@ font-family:
         .description{
             font-size: 30px;
             padding: 20px;
-            margin: 0 auto;}
+            margin: 0 auto;
+        font-family: 'Dancing Script',
+            cursive;}
         
         form{
             padding: 20px;
@@ -50,11 +52,14 @@ font-family:
         }
             .weather-forecast{
                 text-align: center;
+                font-family: 'Dancing Script',
+                    cursive;
             }
     .forecast-day{
         color: black;
-        opacity: 0.7;
+        
     }
     .min-forecast{
+        color: black;
         opacity: 0.6;
     }

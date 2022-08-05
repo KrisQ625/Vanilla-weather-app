@@ -29,7 +29,25 @@ let currentDate = now.getDate();
 now = document.querySelector("#time");
 now.innerHTML = `  ${currentDay}, ${currentMonth}, ${currentDate}`;
 
+function displayForecast(){
+  let forecastElement=document.querySelector("#forecast");
+   forecastHTML=`<div class="row">`
+  let days= ["Thur", "Frid", "Sat","Sun","Mon"];
+  days.forEach(function(day){ 
+  forecastHTML=forecastHTML+
+  ` <div clss="col-2">
+      <div clas="forecast-day">${day}</div>
+      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="50"/>
+      <span class="max-forecast">18</span>
+      <span class="min-forecast">12</span>
+    
+  </div>
+` });
 
+  
+forecastHTML=forecastHTML+`</div>`;
+forecastElement.innerHTML=forecastHTML;
+}
 function searchCity(event){
 event.preventDefault();
 let cityName= document.querySelector("#city-input");
@@ -60,8 +78,9 @@ wind.innerHTML=Math.round(response.data.wind.speed);
   name.innerHTML = response.data.name;
   let icon= document.querySelector("#icon");
   icon.setAttribute("src",`http://openweathermap.org/img/wn/${iconElement}@2x.png`);
-
   celsiusTemperature=Math.round(response.data.main.temp);
+
+  displayForecast();
   
 }
 let celsiusTemperature=null
