@@ -106,6 +106,6 @@ wind.innerHTML=`${windElement} km/h`;
 
    getForecast(response.data.coord)}
   
-let celsiusTemperature=null
+
 
 
