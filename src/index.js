@@ -32,7 +32,7 @@ now.innerHTML = `  ${currentDay}, ${currentMonth}, ${currentDate}`;
 
 function getForecast(coordinates){
   let apiKey=`e8a7198dcdc5f4458611e02123c52297`;
-  let apiUrl= `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
 console.log(getForecast);
 axios.get(apiUrl).then(displayForecast);
 
@@ -54,7 +54,7 @@ function displayForecast(response){
   forecastHTML=`<div class="row">`
   forecast.forEach(function(forecastDay,index){
     if(index<6) {
-  forecastHTML=forecastHTML+
+  forecastHTML=forecastHTML +
   ` <div clss="col-2">
       <div clas="forecast-day">${formatDay(forecastDay.dt)}</div>
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="50"/>
@@ -65,7 +65,7 @@ function displayForecast(response){
 `} });
 
   
-forecastHTML=forecastHTML+`</div>`;
+forecastHTML=forecastHTML +`</div>`;
 forecastElement.innerHTML=forecastHTML;
 }
 function searchCity(event){
