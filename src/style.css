@@ -23,7 +23,10 @@ font-family:
     p{ font-size: 40px;
         text-align: center;
         padding: auto;
-        color: black;}
+        color: black;
+      font-weight: 100;
+    font-family:'Dancing Script',
+      cursive ;}
         .description{
             font-size: 30px;
             padding: 20px;
@@ -42,16 +45,13 @@ font-family:
             border-color: aliceblue;
         
     box-shadow: 5px;}
+
         ul{list-style: none;
         text-transform: capitalize;}
         .source{ display: block;}
-
-        a{
-          text-decoration: none;
-          color: rgb(35, 34, 34);
-        }
-            .weather-forecast{
-                text-align: center;
+        
+          .weather-forecast{
+              text-align: center;
                 font-family: 'Dancing Script',
                     cursive;
             }
@@ -63,3 +63,7 @@ font-family:
         color: black;
         opacity: 0.6;
     }
+    .source{
+        display: block;
+        text-align: center;
+    } 

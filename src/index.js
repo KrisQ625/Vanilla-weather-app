@@ -52,7 +52,8 @@ function displayForecast(response){
   let forecast= response.data.daily;
   let forecastElement=document.querySelector("#forecast");
   forecastHTML=`<div class="row">`
-  forecast.forEach(function(forecastDay,index){
+  forecast.forEach
+    (function(forecastDay,index){
     if(index<6) {
   forecastHTML=forecastHTML +
   ` <div clss="col-2">
@@ -68,18 +69,29 @@ function displayForecast(response){
 forecastHTML=forecastHTML +`</div>`;
 forecastElement.innerHTML=forecastHTML;
 }
-function searchCity(event){
-event.preventDefault();
-let cityName= document.querySelector("#city-input");
-let city=`${cityName.value}`;
 
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e8a7198dcdc5f4458611e02123c52297`
+
+function searchCity (city){
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e8a7198dcdc5f4458611e02123c52297`
 
 axios.get(apiUrl).then(showTemp);
 
+
+}
+function handleSubmit(event){
+event.preventDefault();
+let cityName= document.querySelector("#city-input");
+let city=`${cityName.value}`;
+cityName.value= "";
+searchCity(city);
+
+//let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e8a7198dcdc5f4458611e02123c52297`
+
+//axios.get(apiUrl).then(showTemp);
+
 }
 let search = document.querySelector("#search-form");
-search.addEventListener("submit", searchCity);
+search.addEventListener("submit", handleSubmit);
 
 function showTemp(response)
 {let temperature = Math.round(response.data.main.temp);
@@ -108,4 +120,4 @@ wind.innerHTML=`${windElement} km/h`;
   
 
 
-
+searchCity("London");
