@@ -48,13 +48,13 @@ function formatDay(timestamp){
   return days[day];
 }
 
+
 function displayForecast(response){
   let forecast= response.data.daily;
   let forecastElement=document.querySelector("#forecast");
   forecastHTML=`<div class="row">`
-  forecast.forEach
-    (function(forecastDay,index){
-    if(index<6) {
+  forecast.forEach(function(forecastDay, index){
+    if ( index < 6){
   forecastHTML=forecastHTML +
   ` <div clss="col-2">
       <div clas="forecast-day">${formatDay(forecastDay.dt)}</div>
@@ -65,11 +65,11 @@ function displayForecast(response){
   </div>
 `} });
 
-  
+    
 forecastHTML=forecastHTML +`</div>`;
 forecastElement.innerHTML=forecastHTML;
 }
-
+console.log(displayForecast);
 
 function searchCity (city){
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e8a7198dcdc5f4458611e02123c52297`
@@ -85,9 +85,6 @@ let city=`${cityName.value}`;
 cityName.value= "";
 searchCity(city);
 
-//let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e8a7198dcdc5f4458611e02123c52297`
-
-//axios.get(apiUrl).then(showTemp);
 
 }
 let search = document.querySelector("#search-form");
@@ -116,7 +113,7 @@ wind.innerHTML=`${windElement} km/h`;
 
   
 
-   getForecast(response.data.coord)}
+   getForecast(response.data.coord);}
   
 
 
