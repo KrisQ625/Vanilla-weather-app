@@ -57,11 +57,16 @@ font-family:
             }
     .forecast-day{
         color: black;
+        font-weight: 300px;
         
+    }
+    .max-forecast{
+      color: black;
     }
     .min-forecast{
         color: black;
         opacity: 0.6;
+        font-size: smaller;
     }
     .source{
         display: block;
