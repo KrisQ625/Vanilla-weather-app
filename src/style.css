@@ -57,7 +57,7 @@ font-family:
             }
     .forecast-day{
         color: black;
-        font-weight: 300px;
+        font-weight: 500px;
         
     }
     .max-forecast{
@@ -72,3 +72,6 @@ font-family:
         display: block;
         text-align: left;
     } 
+.wind{
+  text-transform: lowercase;
+}
